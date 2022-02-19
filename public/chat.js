@@ -2,7 +2,7 @@ $(function () {
   
   // const PORT = process.env.PORT || 3000;
   // const socket = io.connect(`http://localhost:${PORT}`);
-  var io = require('socket.io-client');
+  // var io = require('socket.io-client');
 
   const socket = io.connect('https://chat---socket.herokuapp.com/', {secure: true});
 
