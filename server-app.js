@@ -19,7 +19,7 @@ const io = require('socket.io')(server, {
         methods: ["GET", "POST"],
         transports: ['websocket', 'polling'],
         credentials: true,
-        secure: true
+        secure: false
     },
     allowEIO3: true
 });
