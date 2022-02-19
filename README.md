@@ -1,1 +1,1 @@
-# https://chat---socket.herokuapp.com/
+# http://chat---socket.herokuapp.com/
