@@ -11,11 +11,11 @@ app.get('/', (_, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-server = app.listen(PORT, '0.0.0.0', () => console.info("Server is running..."));
+server = app.listen(PORT ,() => console.info("Server is running..."));
 
 const io = require('socket.io')(server, {
     cors: {
-        origin: "https://chat---socket.herokuapp.com/",
+        // origin: "0.0.0.0",
         methods: ["GET", "POST"],
         transports: ['websocket', 'polling'],
         credentials: true
@@ -26,7 +26,7 @@ const io = require('socket.io')(server, {
 const arrayMessages = [];
 let roomUsers;
 
-io.sockets.on('connection', (socket) => {
+io.on('connection', (socket) => {
 	console.log('New user connected')
 
     socket.on('create', (room) => {

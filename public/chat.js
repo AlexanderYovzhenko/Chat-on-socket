@@ -1,6 +1,7 @@
 $(function () {
   
-  const socket = io.connect("https://chat---socket.herokuapp.com/");
+  const PORT = 3000;
+  const socket = io.connect(`http://localhost:${PORT}`);
   
   const message = $("#message");
   const username = $("#username");
