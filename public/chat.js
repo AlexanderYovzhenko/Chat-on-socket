@@ -1,6 +1,6 @@
 $(function () {
   
-  const PORT = 3000;
+  const PORT = process.env.PORT || 3000;
   const socket = io.connect(`http://localhost:${PORT}`);
   
   const message = $("#message");
