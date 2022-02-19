@@ -9,11 +9,11 @@ app.get('/', (_, res) => {
 	res.render('index')
 });
 
-server = app.listen("3000", () => console.log("Server is running..."));
+server = app.listen("3000", '0.0.0.0' ,() => console.log("Server is running..."));
 
 const io = require('socket.io')(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "0.0.0.0",
         methods: ["GET", "POST"],
         transports: ['websocket', 'polling'],
         credentials: true
