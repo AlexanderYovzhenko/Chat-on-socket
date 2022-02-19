@@ -1,7 +1,14 @@
 $(function () {
   
-  const PORT = process.env.PORT || 3000;
-  const socket = io.connect(`http://localhost:${PORT}`);
+  // const PORT = process.env.PORT || 3000;
+  // const socket = io.connect(`http://localhost:${PORT}`);
+
+  const socketURL =
+  process.env.NODE_ENV === 'production'
+    ? window.location.hostname
+    : 'https://localhost:3000';
+
+const socket = io.connect(socketURL, {secure: true});
   
   const message = $("#message");
   const username = $("#username");
