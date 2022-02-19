@@ -26,7 +26,7 @@ const io = require('socket.io')(server, {
 const arrayMessages = [];
 let roomUsers;
 
-io.sockets.on('connection', (socket) => {
+io.on('connection', (socket) => {
 	console.log('New user connected')
 
     socket.on('create', (room) => {

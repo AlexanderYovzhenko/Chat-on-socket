@@ -4,7 +4,7 @@ $(function () {
   // const socket = io.connect(`http://localhost:${PORT}`);
   var io = require('socket.io-client');
 
-  const socket = io.connect('https://chat---socket.herokuapp.com', {secure: true});
+  const socket = io.connect('https://chat---socket.herokuapp.com/', {secure: true});
 
 //   const socketURL =
 //   process.env.NODE_ENV === 'production'
