@@ -4,14 +4,14 @@ $(function () {
   // const socket = io.connect(`http://localhost:${PORT}`);
   // var io = require('socket.io-client');
 
-  // const socket = io.connect('http://chat---socket.herokuapp.com', {secure: true});
+  const socket = io.connect('http://chat---socket.herokuapp.com', {secure: true});
 
-  const socketURL =
-  process.env.NODE_ENV === 'production'
-    ? window.location.hostname
-    : 'http://localhost:3000';
+//   const socketURL =
+//   process.env.NODE_ENV === 'production'
+//     ? window.location.hostname
+//     : 'https://localhost:3000';
 
-const socket = io.connect(socketURL, {secure: true});
+// const socket = io.connect(socketURL, {secure: true});
   
   const message = $("#message");
   const username = $("#username");
