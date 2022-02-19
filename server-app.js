@@ -13,9 +13,11 @@ const PORT = process.env.PORT || 3000;
 
 server = app.listen(PORT, '0.0.0.0', () => console.info("Server is running..."));
 
-const io = require('socket.io')(server, {
+const socketIO = require('socket.io');
+
+const io = socketIO(server, {
     cors: {
-        origin: "https://chat---socket.herokuapp.com/",
+        // origin: "https://chat---socket.herokuapp.com/",
         methods: ["GET", "POST"],
         transports: ['websocket', 'polling'],
         credentials: true

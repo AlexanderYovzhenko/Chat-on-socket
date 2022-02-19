@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "12.17.x"
+  },
   "scripts": {
     "start": "node server-app.js"
   },
